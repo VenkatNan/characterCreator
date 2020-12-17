@@ -1,4 +1,11 @@
-// const mongoose = require('mongoose')
-// const Schema = mongoose.Schema
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
 
-// module.exports = mongoose.model("Character", characterSchema);
+const charSchema= new Schema({
+    name: String,
+    
+},{
+        timestamps:true
+    })
+
+module.exports = mongoose.model("Character", charSchema);

@@ -1,6 +1,8 @@
-// const Char = require('../models/character')
-// const axios = require('axios')
+const Char = require('../models/character')
+const axios = require('axios')
 
-// module.exports = {
-
-//   }
+module.exports = {
+    index,
+    addChar,
+    create,
+  }
