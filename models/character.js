@@ -22,10 +22,10 @@ const charSchema= new Schema({
     name: String,
     race:String,
     level: Number,
+    class:String,
+    pic:String,
     abilityScore:[abilityScoreSchema],
     stats:[statsSchema],
-
-    
 },{
         timestamps:true
     })

@@ -8,7 +8,7 @@ module.exports = {
 
   function index(req,res){
     Char.find({}, function(err, chars) {
-        res.render('characters', {title: "All characters", chars})
+        res.render('characters', {title: "All characters",user: req.user, chars})
       })
   }
 

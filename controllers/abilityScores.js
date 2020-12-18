@@ -6,7 +6,7 @@ module.exports = {
 
 function create(req, res) {
   Character.findById(req.params.id, function(err, char) {
-    char.reviews.push(req.body)
+    char.abilityScore.push(req.body)
     char.save(function(err) {
       res.redirect(`/characters/${char._id}`)
     })
