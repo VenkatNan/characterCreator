@@ -14,6 +14,9 @@
                 <li><strong> Name: </strong> <a href="/characters/<%=char._id%>"> <%=char.name.toUpperCase()%> </a> </li>
                 <li> <strong> Character Class</strong> <%=char.class%> <br>
                 <li> <strong> Character Level</strong> <%=char.level%> <br>
+                    <form action="/characters/<%=  char._id %>?_method=DELETE" method="POST">
+                        <button type="submit">Delete </button>
+                      </form>
                 <hr>
     <% }); %>
     </ul>

@@ -59,5 +59,8 @@ function update(req,res){
     })
 }
 function delChar(req,res){
-  
+  Char.findByIdAndDelete(req.params.id)
+  .then(() => {
+    res.redirect('/characters')
+  })
 }
