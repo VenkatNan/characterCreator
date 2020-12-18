@@ -13,9 +13,13 @@ module.exports = {
   }
 
   function addChar(req,res){
-      
+    res.render('characters/new', {title: "Add Character", user: req.user, err: ''})
 }
 
 function create(req,res){
-      
+    Char.create(req.body)
+    .then((char)=>{
+        console.log(char)
+        res.redirect('/characters')
+    })
 }

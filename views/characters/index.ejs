@@ -11,8 +11,8 @@
     <% if(chars.length > 0){%>
         <ul style="list-style: none;">
         <% chars.forEach((char) => { %>
-                <li><strong> Name: </strong><%=char.Name%> </a> </li>
-                <li> <strong> Character CLass</strong> <%=char.class%> <br>
+                <li><strong> Name: </strong><%=char.name.toUpperCase()%> </a> </li>
+                <li> <strong> Character Class</strong> <%=char.class%> <br>
                 <li> <strong> Character Level</strong> <%=char.level%> <br>
                 <hr>
     <% }); %>

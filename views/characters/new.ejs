@@ -6,7 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    <%- include('./partials/header') %>
+    <%- include('../partials/header') %>
     <h1>New Page</h1>
+    <form action="/characters" method="POST">
+        <div>
+            <input type="text" name="name" placeholder="Character Name">
+            <input type="text" name="race" placeholder="Race">
+            <input type="number" name="level" placeholder="Level">
+            <input type="text" name="class" placeholder="Class">
+            
+        </div>
+        <br>
+        
+        <br>
+        <button type="submit">Add Character</button>
+    </form>
 </body>
 </html>

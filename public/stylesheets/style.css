@@ -1,9 +1,11 @@
 body {
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: gray;
+  background-color: rgba(240 248, 255, 0.404);
   margin: 0;
 }
 
 nav {
-  background-color: white;
+  background-color: rgba(0, 72, 90, 0.575);
+  color: aliceblue;
 }
+

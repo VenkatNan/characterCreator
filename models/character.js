@@ -15,7 +15,7 @@ const abilityScoreSchema = new Schema({
 const statsSchema = new Schema({
     hp:Number,
     ac:Number,
-    speed:Number,
+    sp:Number,
 })
 
 const charSchema= new Schema({
