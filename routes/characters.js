@@ -5,4 +5,4 @@ router.get('/', characterCtrl.index)
 router.get('/new', characterCtrl.addChar)
 router.post('/', characterCtrl.create)
 
-module.exports = routers
+module.exports = router;

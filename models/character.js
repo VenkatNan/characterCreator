@@ -1,9 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const skillSchema = new Schema({
 
-})
 const abilityScoreSchema = new Schema({
    con :Number,
    dex :Number,
@@ -21,10 +19,9 @@ const statsSchema = new Schema({
 })
 
 const charSchema= new Schema({
-    name: {Type: String , required:true},
-    race:{Type: String , required:true},
-    level: {Type: Number , required:true},
-    skills:[skillSchema],
+    name: String,
+    race:String,
+    level: Number,
     abilityScore:[abilityScoreSchema],
     stats:[statsSchema],
 
