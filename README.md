@@ -4,7 +4,7 @@
 #
 # Setup / Layout
 this is the wire frame 
-![wireframe](/css/img/project01%20-%20Window.png)
+![wireframe](/public/images/characterCreator.png)
 
 
 #
