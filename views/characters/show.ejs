@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../partials/header') %>
+
+
+    <div>
+    <h1><%=char.name.toUpperCase()%></h1>
+    <h3><%=char.race%></h3>
+    <h3><%=char.level%></h3>
+    </div>
+
+    <form action="/characters/<%=char._id%>?_method=PUT" method="POST">
+        <table>
+          <thead>
+            <tr>
+              <th>Ability</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>Constitution</td>
+                <td>  
+                    <input type="number" name="con" placeholder="<%=char.abilityScore.con%>" value=<%=char.abilityScore.con%>> <%=char.abilityScore.con%>
+                </td>
+            </tr>
+            <tr>
+                <td>Dexterity</td>
+                <td>  
+                    <input type="number" name="dex" placeholder="<%=char.abilityScore.dex%>" value=<%=char.abilityScore.dex%>> <%=char.abilityScore.dex%>
+                </td>
+            <tr>
+                <td>Wisdom</td>
+                <td>  
+                    <input type="number" name="wis" placeholder="<%=char.abilityScore.wis%>" value=<%=char.abilityScore.wis%>> <%=char.abilityScore.wis%>
+                </td>
+            </tr>
+            <tr>
+                <td>Intellect</td>
+                <td>  
+                    <input type="number" name="int" placeholder="<%=char.abilityScore.int%>" value=<%=char.abilityScore.int%>> <%=char.abilityScore.int%>
+                </td>
+            </tr>
+            </tr>
+            <tr>
+                <td>Strength</td>
+                <td>  
+                    <input type="number" name="str" placeholder="<%=char.abilityScore.str%>" value=<%=char.abilityScore.str%>> <%=char.abilityScore.str%>
+                </td>
+            </tr>
+            <tr>
+                <td>Luck</td>
+                <td>  
+                    <input type="number" name="luck" placeholder="<%=char.abilityScore.luck%>" value=<%=char.abilityScore.luck%>> <%=char.abilityScore.luck%>
+                </td>
+            </tr>
+            <tr>
+                <td>Charisma</td>
+                <td>  
+                    <input type="number" name="char" placeholder="<%=char.abilityScore.char%>" value=<%=char.abilityScore.char%>> <%=char.abilityScore.char%>
+                </td>
+            </tr>
+            
+
+          </tbody>
+        </table>
+        <button type="submit">save scores</button>
+    </form>
+      
+
+</body>
+</html>

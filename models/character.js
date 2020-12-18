@@ -10,8 +10,8 @@ const abilityScoreSchema = new Schema({
    str :Number,
    luck :Number,
    char :Number,
-
 })
+
 const statsSchema = new Schema({
     hp:Number,
     ac:Number,
@@ -24,8 +24,8 @@ const charSchema= new Schema({
     level: Number,
     class:String,
     pic:String,
-    abilityScore:[abilityScoreSchema],
-    stats:[statsSchema],
+    abilityScore:abilityScoreSchema,
+    stats:statsSchema,
 },{
         timestamps:true
     })
