@@ -48,4 +48,21 @@ a:hover {
   margin: 20px;
   border: 4px solid #242561;
 }
-
+#charBase{ 
+  padding: 10px;
+}
+table{
+  padding: 10px;
+}
+#editBtn{
+  background-color:#242561;
+  margin-top: 25px;
+}
+#submitBtn{
+  background-color:#242561;
+  color: aliceblue;
+  margin-bottom: 10px;
+}
+button:hover {
+  background-color:  #aec9d1;
+}

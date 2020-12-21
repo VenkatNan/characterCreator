@@ -7,21 +7,28 @@
 </head>
 <body>
     <%- include('../partials/header') %>
-    <h1>All Characters</h1>
-    <% if(chars.length > 0){%>
-        <ul style="list-style: none;">
-        <% chars.forEach((char) => { %>
-                <li><strong> Name: </strong> <a href="/characters/<%=char._id%>"> <%=char.name.toUpperCase()%> </a> </li>
+    <div id="indexCard">
+        <h1>All Characters</h1>
+        <% if(chars.length > 0){%>
+
+            <ul style="list-style: none;">
+
+            <% chars.forEach((char) => { %>
+
+                <li><button style="background-color:#242561;"><a href="/characters/<%=char._id%>"><%=char.name.toUpperCase()%></a></button></li>
                 <li> <strong> Character Class</strong> <%=char.class%> <br>
                 <li> <strong> Character Level</strong> <%=char.level%> <br>
-                    <form action="/characters/<%=  char._id %>?_method=DELETE" method="POST">
-                        <button type="submit">Delete </button>
-                      </form>
+
+                <form action="/characters/<%=  char._id %>?_method=DELETE" method="POST">
+                    <button type="submit">Delete </button>
+                </form>
+
                 <hr>
-    <% }); %>
-    </ul>
-    <%} else{ %>
-        <h3>No characters created yet</h3>
-    <%}%>
+        <% }); %>
+        </ul>
+        <%} else{ %>
+            <h3>No characters created yet</h3>
+        <%}%>
+    </div>
 </body>
 </html>

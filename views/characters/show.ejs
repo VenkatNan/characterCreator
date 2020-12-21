@@ -11,19 +11,13 @@
     <div id="showCard">
         <div id="charBase">
             <h1> <%= char.name %> </h1>
-            <h3><%=char.race%></h3>
-            <h3><%=char.level%></h3>
-            <button style="background-color:#242561;"><a href="/characters/<%=char._id%>/edit" class="name">Edit <%=char.name.toUpperCase()%>'s base traits?</a></button>
+            <h3>Race: <%=char.race%></h3>
+            <h3>Level: <%=char.level%></h3>
+            <button id="editBtn"><a href="/characters/<%=char._id%>/edit" class="name">Edit <%=char.name.toUpperCase()%>?</a></button>
         </div>
 
         <form action="/characters/<%=char._id%>?_method=PUT" method="POST">
             <table>
-                <thead>
-                <tr>
-                    <th>Ability</th>
-                    <th>Score</th>
-                </tr>
-                </thead>
                 <tbody>
                 <tr>
                     <td>Constitution</td>
@@ -71,7 +65,7 @@
 
                 </tbody>
             </table>
-            <button type="submit">save scores</button>
+            <button id="submitBtn" type="submit"><a>Save Score</a> </button>
         </form>
     </div>
 
