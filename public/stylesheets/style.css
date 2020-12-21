@@ -4,8 +4,48 @@ body {
   margin: 0;
 }
 
-nav {
-  background-color: rgba(0, 72, 90, 0.575);
+.nav{
+  display: flex; 
+  text-align: center;
+  justify-content: center;
+  /* flex-direction: row; */
   color: aliceblue;
+  background-color: #242561;
+  border-radius: 8px;
+  margin:0 10px 0 10px;
+  position: sticky;
+  top:0px;
+  padding: 10px 5px 10px 5px;
+ 
+}
+#login{
+  float:right;
+  margin-left:auto ;
+}
+
+a{
+  margin: 5px;
+}
+
+a:link {
+  text-decoration: none;
+  color: aliceblue;
+}
+a:visited {
+  text-decoration: none;
+  color: aliceblue;
+}
+a:hover {
+  text-decoration: none;
+  background-color:  #aec9d1;
+  color: #242561;
+}
+
+#showCard{
+  display: flex; 
+  text-align: center;
+  justify-content: center;
+  margin: 20px;
+  border: 4px solid #242561;
 }
 

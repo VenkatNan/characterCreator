@@ -5,7 +5,9 @@ module.exports = {
     addChar,
     create,
     show,
+    edit,
     update,
+    updateAB,
     delChar,
   }
 
@@ -45,7 +47,7 @@ function show(req,res){
     })
   })
 }
-function update(req,res){
+function updateAB(req,res){
   Char.findById(req.params.id)
     .then((char) => {
       // char.abilityScore.con = req.body.con
@@ -62,5 +64,19 @@ function delChar(req,res){
   Char.findByIdAndDelete(req.params.id)
   .then(() => {
     res.redirect('/characters')
+  })
+}
+
+function edit(req,res){
+  Char.findById(req.params.id)
+  .then((char) => {
+    res.render('characters/edit', {char, user: req.user})
+  })
+}
+
+function update(req, res) {
+  Char.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  .then((char) => {
+    res.redirect(`/characters/${char._id}`)
   })
 }

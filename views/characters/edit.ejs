@@ -5,31 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <tr>
-        <td>Dexterity</td>
-        <td><%=char.abilityScore.dex%></td>
-    </tr>
-    <tr>
-        <td>Wisdom</td>
-        <td><%=char.abilityScore.wis%></td>
-    </tr>
-    <tr>
-        <td>Intellect</td>
-        <td><%=char.abilityScore.int%></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td><%=char.abilityScore.str%></td>
-    </tr>
-    <tr>
-        <td>Luck</td>
-        <td><%=char.abilityScore.luck%></td>
-    </tr>
-    <tr>
-        <td>Charisma</td>
-        <td><%=char.abilityScore.char%></td>
-    </tr>
+<h1>Edit <%=char.name%></h1>
+<form action="/characters/<%= char._id %>?_method=PUT" method="POST">
+    <input type="text" name="name" placeholder="character name" value="<%=char.name%>"><br>
+    <input type="text" name="race" placeholder="character race" value="<%=char.race%>"><br>
+    <input type="number" name="level" placeholder="character level" value="<%=char.level%>"><br>
+    <button type="submit">Save character 🦄</button>
+  </form>
 </body>
 </html>
 
