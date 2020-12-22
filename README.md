@@ -1,5 +1,5 @@
 # Nandita's Charactor Creator
-[project deployment]([https://radiant-tor-36894.herokuapp.com/])
+[project deployment](https://radiant-tor-36894.herokuapp.com/)
 
 #
 # Setup / Layout
