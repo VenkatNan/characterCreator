@@ -9,17 +9,17 @@ this is the wire frame
 #
 ## Technology Used
 
-*HTML
-*CSS
-*JavaScript
-*BootStrap 5
-*Node.JS
-*Express.JS
-*Mongoose
-*MongoDB
-*Heroku
-*EJS
-*Google OAuth
+* HTML
+* CSS
+* JavaScript
+* BootStrap 5
+* Node.JS
+* Express.JS
+* Mongoose
+* MongoDB
+* Heroku
+* EJS
+* Google OAuth
 
 
 
@@ -35,11 +35,11 @@ The User can perform basic CRUD actions with the character creator. The can make
 
 #
 ## IceBox
-*You can only edit a character that you've created
-*characters only appear on the index page if they are marked as public,
-*Users can add pictures of their character
-*there will be a loading page
-*Users can randomize a character
+* You can only edit a character that you've created
+* characters only appear on the index page if they are marked as public,
+* Users can add pictures of their character
+* there will be a loading page
+* Users can randomize a character
 
 #
 ## Final Thoughts
