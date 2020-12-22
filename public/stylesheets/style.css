@@ -46,7 +46,18 @@ a:hover {
   text-align: center;
   justify-content: center;
   margin: 20px;
+}
+
+#newCard{
+  display: flex; 
+  text-align: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.card{
   border: 4px solid #242561;
+  margin: 5px;
 }
 
 .indexCard{

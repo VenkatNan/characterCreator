@@ -6,38 +6,43 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-<body>
-    <%- include('../partials/header') %>
-    <h1 class="charAll">New Character</h1>
-    <hr>
-    <div id=newCard>
-    <form action="/characters" method="POST">
-        <div class="form-group">
-            <label >Name</label>
-            <input type="text" name="name" placeholder="Character Name" fclass="form-control">
-        </div>
-        <div class="form-group">
-            <label>Race</label>
-            <input type="text" name="race" placeholder="Race">
-        </div>
+    <body>  
+        <%- include('../partials/header') %>
+        <h1 class="charAll">New Character</h1>
+        <hr>
+        <div id=newCard>
+            <div class="card" style="width: 15rem;">
+                <div class="card-body" style="padding-right: 5px;">
 
-        <div class="form-group">
-            <label>Level</label>
-            <input type="number" name="level" placeholder="Level">
-        </div>
+                    <h3 class="charAll">Character</h3>
+                    <hr>
 
-        <div class="form-group">
-            <label>Class</label>
-            <input type="text" name="class" placeholder="Class">
+                    <form action="/characters" method="POST">
+                        <div class="form-group">
+                            <label >Name</label>
+                            <input type="text" name="name" placeholder="Character Name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Race</label>
+                            <input type="text" name="race" placeholder="Race" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Level</label>
+                            <input type="number" name="level" placeholder="Level" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Class</label>
+                            <input type="text" name="class" placeholder="Class" class="form-control">
+                        </div>
+                        
+                        <br>
+                        <button type="submit" class="btn btn-outline-success">Add Character</button>
+                    </form>
+                </div>
+            </div>
         </div>
-            
-        </div>
-        <br>
-        
-        <br>
-        <button type="submit">Add Character</button>
-    </form>
-</div>
-</body>
+    </body>
 </html>
 
