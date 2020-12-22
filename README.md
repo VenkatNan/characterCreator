@@ -6,6 +6,22 @@
 this is the wire frame 
 ![wireframe](/public/images/characterCreator.png)
 
+#
+## Technology Used
+
+*HTML
+*CSS
+*JavaScript
+*BootStrap 5
+*Node.JS
+*Express.JS
+*Mongoose
+*MongoDB
+*Heroku
+*EJS
+*Google OAuth
+
+
 
 #
 ## PsuedoCode
