@@ -1,5 +1,5 @@
 # Nandita's Charactor Creator
-[project deployment](https://Spell_Binder.surge.sh)
+[project deployment]([https://radiant-tor-36894.herokuapp.com/])
 
 #
 # Setup / Layout
@@ -20,8 +20,6 @@ this is the wire frame
 * Heroku
 * EJS
 * Google OAuth
-
-
 
 #
 ## PsuedoCode
