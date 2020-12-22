@@ -23,7 +23,6 @@ this is the wire frame
 
 #
 ## PsuedoCode
-
 * The user can choose to view all caracters and only create new characters when logged in
 * The user is able to choose a character's Name,Race, Level, and Class, and input the character's 
 
@@ -39,8 +38,5 @@ The User can perform basic CRUD actions with the character creator. The can make
 * there will be a loading page
 * Users can randomize a character
 
-#
-## Final Thoughts
-The main problem i had, is that i am a very slow coder. If i stumble across a big bug, i struggle with it for a while and get frustrated.
 
 
