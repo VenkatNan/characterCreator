@@ -5,13 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<h1>Edit <%=char.name%></h1>
-<form action="/characters/<%= char._id %>?_method=PUT" method="POST">
-    <input type="text" name="name" placeholder="character name" value="<%=char.name%>"><br>
-    <input type="text" name="race" placeholder="character race" value="<%=char.race%>"><br>
-    <input type="number" name="level" placeholder="character level" value="<%=char.level%>"><br>
-    <button type="submit">Save character 🦄</button>
-  </form>
+<div>
+    <h1>Edit <%=char.name%></h1>
+    <form action="/characters/<%=char._id%>?_method=PUT" method="POST">
+
+        <label>Name</label>
+        <input type="text" name="name" placeholder="character name" value="<%=char.name%>"><br>
+        <label>Race</label>
+        <input type="text" name="race" placeholder="character race" value="<%=char.race%>"><br>
+        <label>Level</label>
+        <input type="number" name="level" placeholder="character level" value="<%=char.level%>"><br>
+        <label>Armor Class</label>
+        <input type="number" name="ac" value="<%=char.ac%>"><br>
+        <label>Hit Points</label>
+        <input type="number" name="hp" value="<%=char.hp%>"><br>
+        <label>Speed</label>
+        <input type="number" name="sp" value="<%=char.sp%>"><br>
+
+        <button type="submit">Save</button>
+
+    </form>
+</div>
 </body>
 </html>
 

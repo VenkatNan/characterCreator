@@ -4,31 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
     <%- include('../partials/header') %>
-    <div id="indexCard">
-        <h1>All Characters</h1>
+    <h1 class="charAll">All Characters</h1>
+    <hr>
+
+    <div class="indexCard">
+        
         <% if(chars.length > 0){%>
-
-            <ul style="list-style: none;">
-
             <% chars.forEach((char) => { %>
+                <div class="card" style="width: 15rem; margin: 10px">
+                    <div class="card-body">
+                        <h5 class="card-title">  <button style="background-color:#242561;"><a href="/characters/<%=char._id%>"><%=char.name.toUpperCase()%></a></button> </h5>
 
-                <li><button style="background-color:#242561;"><a href="/characters/<%=char._id%>"><%=char.name.toUpperCase()%></a></button></li>
-                <li> <strong> Character Class</strong> <%=char.class%> <br>
-                <li> <strong> Character Level</strong> <%=char.level%> <br>
+                        <p class="card-text"> <strong>Class: </strong> <%=char.class%> <br> </p>
+                        <p class="card-text">  <strong>Level: </strong> <%=char.level%> <br></p>
 
-                <form action="/characters/<%=  char._id %>?_method=DELETE" method="POST">
-                    <button type="submit">Delete </button>
-                </form>
+                        <form action="/characters/<%=  char._id %>?_method=DELETE" method="POST">
+                         <button type="submit" class="btn btn-outline-danger btn-sm" >Delete </button>
+                        </form>
 
-                <hr>
+                    </div>
+                </div>
         <% }); %>
         </ul>
         <%} else{ %>
             <h3>No characters created yet</h3>
         <%}%>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

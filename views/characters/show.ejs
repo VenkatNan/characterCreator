@@ -4,70 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
     <%- include('../partials/header') %>
 
     <div id="showCard">
-        <div id="charBase">
-            <h1> <%= char.name %> </h1>
-            <h3>Race: <%=char.race%></h3>
-            <h3>Level: <%=char.level%></h3>
-            <button id="editBtn"><a href="/characters/<%=char._id%>/edit" class="name">Edit <%=char.name.toUpperCase()%>?</a></button>
-        </div>
 
-        <form action="/characters/<%=char._id%>?_method=PUT" method="POST">
-            <table>
-                <tbody>
+    <div class="card" style="width: 15rem;">
+        <div class="card-body">
+
+            <h1 class="card-header charAll"> <%=char.name%></h1>
+            
+                <table>
+                
                 <tr>
-                    <td>Constitution</td>
-                    <td>  
-                        <input type="number" name="con" placeholder="<%=char.abilityScore.con%>" value=<%=char.abilityScore.con%>> <%=char.abilityScore.con%>
-                    </td>
+                <td><h4>Race:</h4></td>
+                <td><%=char.race%></td>
                 </tr>
                 <tr>
-                    <td>Dexterity</td>
-                    <td>  
-                        <input type="number" name="dex" placeholder="<%=char.abilityScore.dex%>" value=<%=char.abilityScore.dex%>> <%=char.abilityScore.dex%>
-                    </td>
-                <tr>
-                    <td>Wisdom</td>
-                    <td>  
-                        <input type="number" name="wis" placeholder="<%=char.abilityScore.wis%>" value=<%=char.abilityScore.wis%>> <%=char.abilityScore.wis%>
-                    </td>
+                <td><h4>Level:</h4></td> 
+                <td><%=char.level%></td>
                 </tr>
                 <tr>
-                    <td>Intellect</td>
-                    <td>  
-                        <input type="number" name="int" placeholder="<%=char.abilityScore.int%>" value=<%=char.abilityScore.int%>> <%=char.abilityScore.int%>
-                    </td>
-                </tr>
+                    <td><h4>Health: </h4></td>
+                    <td><%=char.hp%></td>
+                    
                 </tr>
                 <tr>
-                    <td>Strength</td>
-                    <td>  
-                        <input type="number" name="str" placeholder="<%=char.abilityScore.str%>" value=<%=char.abilityScore.str%>> <%=char.abilityScore.str%>
-                    </td>
+                    <td><h4>Armour class: </h4></td>
+                    <td><%=char.ac%></td>
+                    
                 </tr>
                 <tr>
-                    <td>Luck</td>
-                    <td>  
-                        <input type="number" name="luck" placeholder="<%=char.abilityScore.luck%>" value=<%=char.abilityScore.luck%>> <%=char.abilityScore.luck%>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Charisma</td>
-                    <td>  
-                        <input type="number" name="char" placeholder="<%=char.abilityScore.char%>" value=<%=char.abilityScore.char%>> <%=char.abilityScore.char%>
-                    </td>
+                    <td><h4> Speed: </h4></td>
+                <td><%=char.sp%></td>
                 </tr>
                 
+                </table>
 
-                </tbody>
-            </table>
-            <button id="submitBtn" type="submit"><a>Save Score</a> </button>
-        </form>
+        </div>
     </div>
+            <div class="card" style="width:25rem;">
+                <div class="card-body">
+                <form action="/characters/<%=char._id%>?_method=PUT" method="POST">
+                    <h3 class="card-header charAll">Ability Score</h3>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td>Constitution</td>
+                            <td>  
+                                <input type="number" name="con" placeholder="<%=char.abilityScore.con%>" value=<%=char.abilityScore.con%>> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Dexterity</td>
+                            <td>  
+                                <input type="number" name="dex" placeholder="<%=char.abilityScore.dex%>" value=<%=char.abilityScore.dex%>>
+                            </td>
+                        <tr>
+                            <td>Wisdom</td>
+                            <td>  
+                                <input type="number" name="wis" placeholder="<%=char.abilityScore.wis%>" value=<%=char.abilityScore.wis%>>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Intellect</td>
+                            <td>  
+                                <input type="number" name="int" placeholder="<%=char.abilityScore.int%>" value=<%=char.abilityScore.int%>>
+                            </td>
+                        </tr>
+                        </tr>
+                        <tr>
+                            <td>Strength</td>
+                            <td>  
+                                <input type="number" name="str" placeholder="<%=char.abilityScore.str%>" value=<%=char.abilityScore.str%>>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Luck</td>
+                            <td>  
+                                <input type="number" name="luck" placeholder="<%=char.abilityScore.luck%>" value=<%=char.abilityScore.luck%>>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Charisma</td>
+                            <td>  
+                                <input type="number" name="char" placeholder="<%=char.abilityScore.char%>" value=<%=char.abilityScore.char%>>
+                            </td>
+                        </tr>
+                        
 
+                        </tbody>
+                    </table>
+                    <button id="submitBtn" type="submit"><a>Save Score</a> </button>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

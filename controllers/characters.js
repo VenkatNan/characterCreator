@@ -7,7 +7,6 @@ module.exports = {
     show,
     edit,
     update,
-    updateAB,
     delChar,
   }
 
@@ -24,13 +23,13 @@ module.exports = {
 function create(req,res){
   let hero = req.body
   hero.abilityScore = {}
-  hero.abilityScore.con=0
-  hero.abilityScore.dex=0
-  hero.abilityScore.wis=0
-  hero.abilityScore.int=0
-  hero.abilityScore.str=0
-  hero.abilityScore.luck=0
-  hero.abilityScore.char=0
+  hero.abilityScore.con=10
+  hero.abilityScore.dex=10
+  hero.abilityScore.wis=10
+  hero.abilityScore.int=10
+  hero.abilityScore.str=10
+  hero.abilityScore.luck=10
+  hero.abilityScore.char=10
     Char.create(hero)
     .then((char)=>{
         console.log(char)
@@ -47,19 +46,7 @@ function show(req,res){
     })
   })
 }
-function updateAB(req,res){
-  Char.findById(req.params.id)
-    .then((char) => {
-      // char.abilityScore.con = req.body.con
-      char.abilityScore = req.body
-      char.save()
-      console.log(char);
-        res.redirect(`/characters/${req.params.id}`)
-    })
-    .catch((err) =>{
-        console.log(err);
-    })
-}
+
 function delChar(req,res){
   Char.findByIdAndDelete(req.params.id)
   .then(() => {
@@ -73,10 +60,16 @@ function edit(req,res){
     res.render('characters/edit', {char, user: req.user})
   })
 }
-
-function update(req, res) {
-  Char.findByIdAndUpdate(req.params.id, req.body, {new: true})
-  .then((char) => {
-    res.redirect(`/characters/${char._id}`)
-  })
+function update(req,res){
+  Char.findById(req.params.id)
+    .then((char) => {
+      // char.abilityScore.con = req.body.con
+      char.abilityScore = req.body
+      char.save()
+      console.log(char);
+        res.redirect(`/characters/${req.params.id}`)
+    })
+    .catch((err) =>{
+        console.log(err);
+    })
 }
