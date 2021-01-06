@@ -5,6 +5,8 @@
 # Setup / Layout
 this is the wire frame 
 ![wireframe](/public/images/characterCreator.png)
+The trello Link
+[trello link](https://trello.com/b/Fv23HVW8/charactor-creator)
 
 #
 ## Technology Used
